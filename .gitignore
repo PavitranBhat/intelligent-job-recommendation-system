@@ -1,0 +1,4 @@
+*.csv
+*.pdf
+*.txt
+git push -u origin main --force
