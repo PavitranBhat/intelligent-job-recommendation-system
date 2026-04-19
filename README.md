@@ -1,92 +1,111 @@
-# Intelligent Job Recommendation System
+# 💼 Intelligent Job Recommendation System
 
 ## 📌 Overview
-This project is an end-to-end Machine Learning system that recommends suitable job roles based on user resumes. It leverages Natural Language Processing (NLP) techniques to extract meaningful information from unstructured text and match it with job descriptions using similarity-based learning.
 
-The system follows a complete ML pipeline—from text preprocessing and feature extraction to similarity computation and ranking—making it a practical application of real-world recommendation systems.
+An end-to-end Machine Learning + NLP based system that recommends suitable job roles based on user resumes. The system extracts skills from resumes, matches them with job descriptions, and provides personalized job recommendations along with skill gap analysis.
 
 ---
 
 ## 🚀 Features
-- Extracts key skills from resume text using **TF-IDF**
-- Converts unstructured text into numerical feature vectors
-- Matches resumes with job descriptions using **cosine similarity**
-- Ranks job roles based on relevance score
-- Implements a complete **end-to-end ML pipeline**
+
+* Upload resume (PDF) or paste resume text
+* Extract key technical skills from unstructured data
+* Match resume with job roles using TF-IDF and cosine similarity
+* Display job recommendations with match scores
+* 🔥 Skill Gap Analysis to identify missing skills
+* Interactive and user-friendly UI using Streamlit
 
 ---
 
 ## 🧠 Tech Stack
-- Python
-- Scikit-learn
-- NumPy
-- Natural Language Processing (TF-IDF)
-- Cosine Similarity
+
+* Python
+* Scikit-learn
+* NumPy
+* Streamlit
+* PyPDF2
+* Natural Language Processing (TF-IDF)
 
 ---
 
 ## ⚙️ How It Works
 
-1. **Input Resume**  
-   User provides resume text containing skills and experience  
+1. **Resume Input**
 
-2. **Feature Extraction**  
-   TF-IDF converts text into numerical vectors and identifies important keywords  
+   * User uploads a PDF or enters resume text
 
-3. **Skill Representation**  
-   Extracted keywords are treated as core skills  
+2. **Text Processing**
 
-4. **Job Matching**  
-   Job descriptions are vectorized and compared with the resume using cosine similarity  
+   * Resume text is cleaned and preprocessed
 
-5. **Recommendation**  
-   Jobs are ranked and recommended based on similarity scores  
+3. **Skill Extraction**
+
+   * Extracts relevant technical skills using a predefined skill database
+
+4. **Job Matching**
+
+   * TF-IDF vectorization converts text into numerical form
+   * Cosine similarity compares resume with job roles
+
+5. **Recommendations**
+
+   * Top matching job roles are displayed with scores
+
+6. **Skill Gap Analysis 🔥**
+
+   * Identifies missing skills required for each job role
 
 ---
 
 ## 📊 Example Output
 
-Top Job Recommendations:
+**Extracted Skills:**
 
-1. Data Scientist → Match Score: 0.77  
-2. Machine Learning Engineer → Match Score: 0.55  
-3. Backend Developer → Match Score: 0.00  
-4. Web Developer → Match Score: 0.00  
+```
+['python', 'machine learning', 'nlp', 'sql']
+```
+
+**Job Recommendations:**
+
+```
+1. Data Scientist → 51%
+   Missing Skills: ['statistics']
+
+2. Machine Learning Engineer → 32%
+   Missing Skills: ['tensorflow', 'pytorch']
+```
 
 ---
 
 ## 📁 Project Structure
 
-intelligent-job-recommendation-system/  
-│  
-├── notebook.ipynb  
-├── .gitignore  
-└── README.md  
+```
+intelligent-job-recommendation-system/
+│
+├── app.py
+├── notebook.ipynb
+├── .gitignore
+└── README.md
+```
 
 ---
 
 ## ⚠️ Note
-Large datasets are not included in this repository to keep it lightweight.  
-Datasets can be sourced from platforms like Kaggle if required.  
+
+Large datasets are not included in this repository. The project uses a predefined job-skill dataset for demonstration purposes.
 
 ---
 
 ## 🔥 Future Improvements
-- Resume parsing from PDF (real-world input)
-- Advanced NLP techniques for better skill extraction
-- Integration with real job datasets
-- Web application using Streamlit
-- Model evaluation and performance tuning
 
----
-
-## 💡 Key Learning Outcomes
-- Practical implementation of TF-IDF for feature extraction  
-- Understanding similarity-based recommendation systems  
-- Handling unstructured text data using NLP  
-- Building an end-to-end ML pipeline  
+* LLM-based skill extraction (GPT / embeddings)
+* Real-time job API integration
+* Advanced resume parsing
+* Deployment on Streamlit Cloud
+* Authentication system for users
 
 ---
 
 ## 👩‍💻 Author
+
 **Pavitra Bhat**
